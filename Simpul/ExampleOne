@@ -1,0 +1,49 @@
+class Simpul{
+   int data;
+   Simpul kiri;
+   Simpul kanan;
+   
+   Simpul(){
+   }
+   Simpul(int datax){
+      this.data = datax;
+   }
+}
+
+
+public class ExampleOne {
+   public static void main(String[] args) {
+      int input [] = {16,26,9,21};
+      
+      Simpul akar,temp;
+      int a = input[i];
+      
+      for(int i = 0; i < input.length; i++){
+         
+         akar = null;
+         temp  = new Simpul(a);
+         if (akar == null){
+            akar = temp;
+         }
+         else{
+            Simpul penunjuk = akar;
+            Simpul parent = null;
+            while(penunjuk != null){
+               parent = penunjuk;
+               if(a < penunjuk.data){
+                  penunjuk = penunjuk.kiri;
+               }
+               else{
+                  penunjuk = penunjuk.kanan;
+               }
+            }
+            if(a < parent.data){
+               parent.kiri = temp;
+            }
+            else{
+               parent.kanan = temp;
+            }
+         }
+      }
+   }
+}
