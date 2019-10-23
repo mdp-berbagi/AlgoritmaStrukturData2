@@ -1,11 +1,11 @@
 import java.util.*;
 
+/* Asitektur Simpul */
 class Simpul {
    int data;
    Simpul kiri, kanan;
-   Simpul() {
-      
-   }
+	
+   Simpul() {}
    
    Simpul(int data) {
       this.data = data;
@@ -14,14 +14,19 @@ class Simpul {
    public void setData(int value) {
       this.data = value;
    }
-   
+
    public int getData() {
       return this.data;
    }
 }
 
+/* 
+ * Binary Search Tree 
+ * 
+ */
 class BST {
    public Simpul akar;
+	
    public void insert(int input) {
       Simpul temp = new Simpul(input);
       Simpul parent = null;
